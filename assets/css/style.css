@@ -1,0 +1,522 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+/* COLOR */
+:root {
+  --primary: #3155e7;
+  --primary-dark: #2045d6;
+  --black: #010101;
+  --gray-1: #788190;
+  --gray-2: #d3d4db;
+  --white: #ffffff;
+  --c-dark: #212529;
+  --c-brand: #4e57d4;
+  --c-brand-light: #6970dd;
+  --c-brand-rgb: 78, 87, 212;
+  --c-body: #727272;
+  --transition: all 0.5s ease;
+  --box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* BUTTON */
+.btn {
+  border-radius: 8px;
+}
+.btn-primary,
+.btn-outline-secondary {
+  padding: 12px 20px;
+}
+.btn-primary {
+  background-color: var(--primary);
+}
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+.btn-outline-secondary {
+  border: 1px solid var(--gray-2);
+  color: var(--black);
+}
+.btn-outline-secondary:hover {
+  background-color: var(--gray-2);
+  border: 1px solid var(--gray-2);
+  color: var(--black);
+}
+.btn-outline-secondary:focus {
+  background-color: var(--gray-2);
+  border: 1px solid var(--gray-2);
+  color: var(--black);
+}
+
+/* NAVBAR */
+.navbar .btn-outline-secondary {
+  border: 1px solid var(--gray-2);
+  color: var(--black);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 10px 16px;
+}
+.navbar {
+  padding: 32px 0;
+  transition: padding 0.3s ease;
+}
+.navbar.scrolled {
+  padding: 12px 0;
+}
+.nav-link {
+  margin-left: 41px;
+  font-size: 16px;
+  color: var(--gray-1);
+}
+.navbar-nav .nav-link:hover {
+  color: var(--black);
+}
+
+/* HERO */
+section.hero {
+  padding: 180px 0 60px 0;
+}
+section.hero p {
+  margin-top: 20px;
+}
+section.hero .text {
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 60px;
+  color: var(--black);
+}
+.buttons {
+  padding-top: 40px;
+}
+.buttons .btn {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+/* SETUP */
+section.setup {
+  padding: 160px 0;
+}
+section.setup .text-header h3,
+section.packages .text-header h3,
+section.contact .text-header h3 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 48px;
+  color: var(--black);
+}
+section.setup .text-header p,
+section.packages .text-header p,
+section.contact .text-header p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: var(--gray-1);
+  padding: 27px 0;
+}
+section.setup .icons {
+  padding: 27px 0;
+}
+section.setup h5 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--black);
+  padding-bottom: 18px;
+}
+section.setup .desc p {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 22px;
+  color: var(--gray-1);
+  max-width: 284px;
+  margin: 0 auto;
+}
+
+/* INFORMATION */
+section.information {
+  padding: 0 0 120px 0;
+}
+section.information h5 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 48px;
+  color: var(--black);
+}
+section.information p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28px;
+  color: var(--gray-1);
+  padding-top: 20px;
+}
+section.information .info-1 {
+  padding: 183px 0;
+}
+
+/* CONTACT */
+.theme-shadow {
+  box-shadow: var(--box-shadow);
+}
+.section-padding {
+  padding-bottom: 140px;
+}
+.contact button {
+  background-color: var(--primary);
+  font-weight: 700;
+  color: white;
+}
+.contact button:hover {
+  background-color: var(--primary-dark);
+  color: white;
+}
+form {
+  border-radius: 15px;
+}
+/* FOOTER */
+footer {
+  padding-top: 20px;
+  margin-bottom: 44px;
+}
+footer a {
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--black);
+  line-height: 18px;
+}
+footer .copy {
+  margin-top: 32px;
+  font-size: 14px;
+  color: var(--gray-1);
+  line-height: 17px;
+  font-weight: 400;
+}
+
+/* SECTION TITLE */
+.section-title {
+  margin-bottom: 60px;
+}
+
+.section-title p {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* SERVICE */
+.service {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.service::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: rgba(var(--c-brand-rgb), 0.2);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: var(--transition);
+}
+
+.service:hover::after {
+  width: 100%;
+  height: 100%;
+  background: var(--c-brand);
+  z-index: -1;
+}
+
+.service:hover h5,
+.service:hover p {
+  color: white;
+}
+
+.service:hover .iconbox {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+/* ICONBOX */
+.iconbox {
+  width: 70px;
+  height: 70px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(var(--c-brand-rgb), 0.1);
+  color: var(--c-brand);
+  font-size: 34px;
+  flex: none;
+}
+
+/* PAKET */
+.packages {
+  padding: 120px 0;
+}
+.package-card {
+  padding: 50px 20px;
+  box-shadow: var(--box-shadow);
+  border-radius: 20px;
+}
+.package-card h5 {
+  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+ul {
+  list-style-type: none;
+  padding-left: 0; /* Menghapus padding default */
+}
+
+/* CONTACT */
+.contact {
+  padding-top: 160px;
+}
+
+/* fitur ai */
+.chat-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fcd800;
+  border-radius: 50px;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 24px;
+  text-align: center;
+  transition: transform 0.2s ease, background 0.8s ease;
+  background-image: linear-gradient(
+    45deg,
+    var(--primary-dark) 0%,
+    #0086fc 50%,
+    var(--primary-dark) 100%
+  );
+  background-size: 200% 100%;
+  font-size: 30px; /* Ukuran ikon */
+  line-height: 38px;
+  color: #ffffff; /* Warna ikon */
+  width: 70px;
+  height: 70px;
+}
+
+.chat-icon i {
+  width: 20px;
+}
+
+.chat-icon:hover {
+  background-position: 100% 0;
+}
+
+@keyframes popup {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-popup {
+  animation: popup 0.5s ease;
+}
+
+.chat-popup {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  min-width: 60%;
+  min-height: 60%;
+  max-width: 90vw;
+  max-height: 85vh;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  resize: both;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0s 0.4s;
+  display: flex; /* Flex container */
+  flex-direction: column;
+}
+
+/* Transisi awal untuk seluruh popup */
+.chat-popup.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s ease, visibility 0s;
+}
+
+/* Menyembunyikan konten popup dengan opacity dan posisi awal */
+.chat-popup .chat-popup-header,
+.chat-popup .chat-popup-body,
+.chat-popup .chat-popup-footer {
+  opacity: 0;
+  transform: translateY(20px); /* Menggeser sedikit ke bawah */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Menampilkan konten dengan delay berbeda */
+.chat-popup.show .chat-popup-header {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s; /* Muncul setelah 0.2 detik */
+}
+
+.chat-popup.show .chat-popup-body {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s; /* Muncul setelah 0.4 detik */
+}
+
+.chat-popup.show .chat-popup-footer {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s; /* Muncul setelah 0.6 detik */
+}
+
+.chat-popup-body {
+  padding: 10px;
+  overflow-y: auto;
+  flex-grow: 1; /* Make body grow to take up remaining space */
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-popup-body .ai-message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.chat-popup-body .ai-message p {
+  background-color: #f1f1f1;
+  color: #333;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 70%;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+.chat-popup-body .user-message {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.chat-popup-body .user-message p {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 70%;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+.chat-popup-body p {
+  text-align: left;
+}
+
+.chat-popup-footer {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  flex-shrink: 0; /* Prevent footer from shrinking */
+  justify-content: space-between; /* Keep content spaced in the footer */
+}
+
+.chat-popup-footer input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  flex-grow: 1;
+}
+
+.chat-popup-footer button {
+  width: 50px;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.resizer {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: nwse-resize;
+}
+/* ---------------------------------- */
+
+/* RESPONSIVE */
+@media (max-width: 576px) {
+  section.hero,
+  section.setup,
+  section.information {
+    text-align: center;
+  }
+
+  /* NAVBAR */
+  .navbar {
+    padding: 20px 0;
+  }
+  .nav-link {
+    margin-left: 0;
+  }
+
+  /* HERO */
+  section.hero img {
+    padding-top: 3rem;
+  }
+  section.hero .text {
+    font-weight: 800;
+    font-size: 38px;
+    line-height: 53px;
+  }
+  .buttons .btn {
+    display: block;
+    margin: 1rem 0;
+  }
+  .buttons .ms-3 {
+    margin-left: 0 !important;
+  }
+
+  /* SETUP */
+  section.setup {
+    padding: 50px 0;
+  }
+
+  /* FOOTER */
+  footer {
+    padding-top: 50px;
+    margin-bottom: 44px;
+  }
+}
+
+@media (max-width: 990px) {
+  /* HERO */
+  section.hero img {
+    padding-top: 5rem;
+  }
+}
